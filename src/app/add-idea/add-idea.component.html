@@ -1,0 +1,92 @@
+
+<div mat-dialog-actions>
+    <div class="form-container">
+        <h1 class="form-title"><b>{{data.name}}</b></h1>
+        <form [formGroup]="ideaForm" (ngSubmit)="onSubmit()" class="zoom-form">
+
+            <div class="form-field">
+                <label><b>Project Title</b></label>
+                <input formControlName="title" placeholder="Title of the Idea">
+              </div>
+
+              <div class="form-field">
+                <label><b>Description</b></label>
+                <textarea formControlName="description" placeholder="Problem / Solution / Benefits / Other Info" maxlength="255"></textarea>
+              </div>
+
+          <div class="form-field">
+            <label><b>Proposed By</b></label>
+            <input formControlName="proposedBy" placeholder="First and last name">
+          </div>
+      
+      
+          <div class="form-field">
+            <label><b>Who's Interested in Being a Part of this Project/Team?</b></label>
+            <input formControlName="interestedMembers" placeholder="First and last name">
+          </div>
+
+          <div class="form-field">
+            <label><b>Possible Knowledge/Support needed from Department</b></label>
+            <select formControlName="department" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                <option value="">Select Department</option>
+                <option value="Full Stack">Full Stack</option>
+                <option value="FrontEnd">FrontEnd</option>
+                <option value="BackEnd">BackEnd</option>
+                <option value="DevOps">DevOps</option>
+                <option value="BigData">BigData</option>
+                <option value="No Support Needed">No Support needed </option>    
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+
+        <div class="form-field">
+            <label><b>Value Proposition</b></label>
+            <select formControlName="valueProposition" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                <option value="">Select Value Proposition</option>
+                <option value="#CustomerExperience">#CustomerExperience</option>
+                <option value="#Consumers">#Consumers</option>
+                <option value="#Hours_Saved">#Hours_Saved</option>
+                <option value="#Process Improvement">#Process Improvement</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+      
+
+        <div class="form-field">
+            <label><b>Theme</b></label>
+            <select formControlName="theme" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                <option value="">Select Theme</option>
+                <option value="Delight Our Customers">Delight Our Customers</option>
+                <option value="Improve Data Collaboration">Improve Data Collaboration</option>
+                <option value="Scale">Scale</option>
+                <option value="Simplify">Simplify</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+
+        <div class="form-field">
+            <label><b>Will you need Governance approval for your idea?</b></label>
+            <div style="display: flex; flex-direction: column; align-items: flex-start;">     
+                <div style="display: flex; align-items: center;">
+                    <input type="radio" id="true" formControlName="cakeApproval" value="yes">
+                    <label for="true">Yes</label>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <input type="radio" id="false" formControlName="cakeApproval" value="no">
+                    <label for="false">No</label>
+                </div>
+            </div>
+        </div>
+
+        
+          <!-- <button type="submit" class="submit-button">Submit</button> -->
+          <div style="display: flex; justify-content: space-between;">
+            <button class="submit-button" mat-button [mat-dialog-close]="data.name" cdkFocusInitial type="submit">Submit</button>
+            <!-- <button mat-button (click)="onNoClick()" style="background-color: red; color: white;">Close</button> -->
+            <button class="close-button" mat-button (click)="onNoClick()" >Close</button>
+        </div>
+        </form>
+      </div>
+    
+    <!-- <button mat-button [mat-dialog-close]="data.name" cdkFocusInitial>Ok</button> -->
+</div>

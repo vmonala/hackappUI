@@ -1,0 +1,12 @@
+.ag-theme-alpine {
+    --ag-primary-color: #4CAF50;
+    --ag-secondary-color: #8BC34A;
+}
+
+.ag-cell {
+    color: #4CAF50;
+}
+
+.ag-header-cell {
+    background-color: #8BC34A;
+}

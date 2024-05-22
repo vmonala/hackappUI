@@ -1,0 +1,46 @@
+
+<div>
+    <img src="assets/images.png" alt="Logo" style="width: 200px; height: auto; position: absolute; left: 20px; top: 0; z-index: 9999;">
+</div>
+
+<div [style.display]="isPopupOpen ? 'none' : 'flex'" style="justify-content: center; position: absolute; left: 0; right: 0; top: 0; z-index: 9999;">
+    <img src="assets/hackappNew.png" alt="Logo" style="width: 250px; height: auto;">
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <br><br><br>
+    <!-- <button mat-button (click)="openAddIdeaDialog()">Add Idea+</button> -->
+    <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+        <button class="btn rounded" style="background-color: #5eeb4e;" (click)="openAddIdeaDialog()"><b>Shoot Idea</b></button>
+    </div>
+
+ 
+<div class="content" style="width: 90%; height: 56%;margin: 0 auto;">
+    
+    <ag-grid-angular
+    style="width: 100%; height: 100%;"
+    [rowData]="rowDataJson"
+    [columnDefs]="colDefs"
+    [defaultColDef]="defaultColDef"
+    [rowSelection]="rowSelection"
+    [suppressRowClickSelection]="true"
+    [pagination]="true"
+    [paginationPageSize]="paginationPageSize"
+    [paginationPageSizeSelector]="paginationPageSizeSelector"
+    [class]="themeClass"
+    [gridOptions]="gridOptions"
+  ></ag-grid-angular>
+  </div>
+  
+<br>
+<p style="color: white;"><strong>Add any idea!</strong> - No idea needs to be baked, not all boxes need to be complete, nor do you need to follow through on the idea. Any idea may lead to another idea! Or another group may take your idea and run with it.
+    Interested in making an idea come to life? - Add your name to column F and recruit others to the team. Feel free to reach out to the person who proposed it if they aren't on the team. (Note: make sure you add to the "official teams" tab to make it an offical project)
+    Go team! - Once you have your idea and team (min 3 and max 8 people), "register" your team by adding to the "Official Teams" tab
+    See KB page for more info on how to participate and FAQs</p>   
