@@ -54,17 +54,12 @@ condition: boolean = true;
     this.ideaInternal.valueProposition = this.ideaForm.value.valueProposition;
     this.ideaInternal.department = this.ideaForm.value.department;
     this.ideaInternal.theme = this.ideaForm.value.theme;
-    this.ideaInternal.cakeApproval = this.ideaForm.value.cakeApproval;
+    //this.ideaInternal.cakeApproval = this.ideaForm.value.cakeApproval;
     this.ideaInternal.rating = 0;
     this.ideaInternal.date = new Date();
 
-    if(this.ideaForm.value.cakeApproval === true){
-      this.ideaInternal.cakeApproval = true;
-    }
-    else{
-      this.ideaInternal.cakeApproval = false;
-    }
-    
+    let cakeApproval: boolean = this.ideaForm.value.cakeApproval.toLowerCase() === 'yes';
+    this.ideaInternal.cakeApproval = cakeApproval;
    
     console.log('this is for http get request');
     this.httpService.getData().subscribe(data => {
