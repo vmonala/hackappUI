@@ -82,7 +82,11 @@ export class HomePageComponent implements OnInit{
       headerName: "Support Needed From Department",width:400
     },
     { field: "theme" },
-    { field: "cakeApproval" },
+    { field: "cakeApproval",
+      headerName: "CAKE 2.0 Approval Needed",
+      valueFormatter: (params) => params.value ? 'Yes' : 'No',
+      cellRenderer: (params: { value: any; }) => params.value ? '<span style="color:green; font-size:21px; display:flex; justify-content:center; align-items:center;">&#10003;</span>' : ''
+     },
     { field: "rating",
     cellRenderer: (params : any) => {
       let rating = params.value;
