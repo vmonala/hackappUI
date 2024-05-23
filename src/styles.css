@@ -10,7 +10,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 @import 'ag-grid-community/styles/ag-theme-alpine.css';
 
 body {
-    background-color: #000000;
+    background-color: #2b2929;
 }
 
 /* body {
