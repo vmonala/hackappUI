@@ -134,7 +134,7 @@ export class HomePageComponent implements OnInit{
 
   public rowSelection: "single" | "multiple" = "multiple";
   public paginationPageSize = 10;
-  public paginationPageSizeSelector: number[] | boolean = [3, 6, 9];
+  public paginationPageSizeSelector: number[] | boolean = [10];
 
   rowDataJson : IdeaResponseService[] = [];
   // rowDataJson$: Observable<IdeaResponseService[]>;
